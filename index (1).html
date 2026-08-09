@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pranaya Rakshe — Cybersecurity Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <div class="nav-logo">pranaya@security<span class="caret">:~$</span></div>
+    <ul class="nav-links">
+      <li><a href="#about">about</a></li>
+      <li><a href="#skills">skills</a></li>
+      <li><a href="#projects">projects</a></li>
+      <li><a href="#education">education</a></li>
+      <li><a href="#contact">contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <section class="hero wrap" id="top">
+    <div class="term-window">
+      <div class="term-titlebar">
+        <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+        <span class="path">root@kali: ~/portfolio</span>
+      </div>
+      <div class="term-body">
+        <div class="term-line"><span class="prompt">┌──(root㉿kali)-[~]</span></div>
+        <div class="term-line">
+          <span class="prompt">└─# </span><span class="cmd" id="typed-cmd"></span>
+        </div>
+        <div id="typed-name"></div>
+        <div id="typed-role"></div>
+        <div class="hero-tags">
+          <span class="tag">ethical hacking</span>
+          <span class="tag">VAPT</span>
+          <span class="tag">network security</span>
+          <span class="tag">web app security</span>
+          <span class="tag">packet analysis</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">▾ scroll — recon in progress</div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-label"><span class="p">$</span> cat about.txt</div>
+      <h2 class="sec-title">About</h2>
+      <div class="about-text">
+        <p>I'm a motivated, detail-oriented cybersecurity fresher building hands-on experience in ethical hacking, network security, vulnerability assessment, and penetration testing. Every project below started as a lab exercise — a target machine, a live capture, a deliberately vulnerable app — and ended with a documented finding and a lesson I carried into the next one.</p>
+        <p>This portfolio walks through that lab work: the tools I used, the methodology I followed, and what I found. I'm now looking for an entry-level opportunity to bring these skills into a real-world security role.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="sec-label"><span class="p">$</span> ls skills/</div>
+      <h2 class="sec-title">Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-panel">
+          <h3>Cybersecurity Skills</h3>
+          <ul>
+            <li>Ethical Hacking Fundamentals</li>
+            <li>Vulnerability Assessment &amp; Penetration Testing (VAPT)</li>
+            <li>Network Security &amp; Web Application Security (Basic)</li>
+            <li>Information Security Principles (CIA Triad, Risk Assessment)</li>
+          </ul>
+        </div>
+        <div class="skill-panel">
+          <h3>Tools &amp; Technologies</h3>
+          <ul>
+            <li>Nmap</li>
+            <li>Wireshark</li>
+            <li>Metasploit Framework</li>
+            <li>Burp Suite (Basic)</li>
+            <li>Kali Linux</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <div class="sec-label"><span class="p">$</span> ./run_lab_projects.sh</div>
+      <h2 class="sec-title">Lab Projects</h2>
+
+      <div class="project">
+        <div class="project-head">
+          <div class="project-title">01 · Network Scanning &amp; Enumeration</div>
+          <div class="project-tools">nmap · kali linux</div>
+        </div>
+        <p class="project-desc">Practiced network scanning using Nmap to identify open ports and services on target machines in a lab environment.</p>
+        <ul class="findings">
+          <li>Performed OS detection and service version analysis</li>
+          <li>Identified open ports and running services across scanned hosts</li>
+          <li>Interpreted scan results to assess potential attack surface</li>
+        </ul>
+        <div class="takeaway"><b>Key takeaway:</b> Reconnaissance is the first stage of a penetration test — scan output maps directly to real vulnerabilities.</div>
+        <div class="shots-row">
+          <div class="shot-frame">
+            <div class="term-titlebar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="path">nmap -sS</span></div>
+            <img src="images/image1.png" alt="Nmap SYN scan output showing open ports and service detection on a target host">
+          </div>
+          <div class="shot-frame">
+            <div class="term-titlebar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="path">nmap -O</span></div>
+            <img src="images/image2.png" alt="Nmap OS detection scan output with device type and OS guesses for a target host">
+          </div>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-head">
+          <div class="project-title">02 · Web Application Security Testing</div>
+          <div class="project-tools">burp suite · DVWA</div>
+        </div>
+        <p class="project-desc">Tested a deliberately vulnerable web application (DVWA) using Burp Suite to identify common web vulnerabilities.</p>
+        <ul class="findings">
+          <li>Identified Cross-Site Scripting (XSS) vulnerabilities</li>
+          <li>Identified SQL Injection vulnerabilities</li>
+          <li>Used Burp Suite to intercept and analyze HTTP requests</li>
+        </ul>
+        <div class="takeaway"><b>Key takeaway:</b> Practical understanding of the OWASP-style vulnerabilities that Burp Suite and manual testing can uncover in web apps.</div>
+        <div class="shot-frame" style="max-width:480px;">
+          <div class="term-titlebar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="path">burpsuite — DVWA</span></div>
+          <img src="images/image3.png" alt="Burp Suite intercepting an HTTP request while testing DVWA for XSS and SQL Injection">
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-head">
+          <div class="project-title">03 · Packet Analysis using Wireshark</div>
+          <div class="project-tools">wireshark</div>
+        </div>
+        <p class="project-desc">Captured and analyzed live network traffic in a lab setup to understand protocol-level communication.</p>
+        <ul class="findings">
+          <li>Captured network traffic during a simulated FTP authentication sequence</li>
+          <li>Observed local network discovery through ARP resolution and IPv6 router solicitations</li>
+          <li>Analyzed TCP handshakes and unencrypted FTP packets to trace cleartext credential exchange</li>
+        </ul>
+        <div class="takeaway"><b>Key takeaway:</b> Reading packet captures reveals service banners, session state, and insecure protocol practices worth auditing.</div>
+        <div class="shot-frame">
+          <div class="term-titlebar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="path">wireshark — capture.pcapng</span></div>
+          <img src="images/image4.png" alt="Wireshark packet capture showing FTP authentication and TCP handshake traffic">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap">
+      <div class="sec-label"><span class="p">$</span> cat education.log</div>
+      <h2 class="sec-title">Education &amp; Certifications</h2>
+      <div class="two-col">
+        <div>
+          <div class="edu-item">
+            <div class="edu-degree">BSc IT</div>
+            <div class="edu-school">Tilak College of Science and Commerce, Mumbai University</div>
+            <div class="edu-year">2022 — 2025</div>
+          </div>
+        </div>
+        <div>
+          <ul class="cert-list">
+            <li>Cybersecurity</li>
+            <li>Network Support &amp; Security</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="more">
+    <div class="wrap">
+      <div class="two-col">
+        <div>
+          <div class="sec-label"><span class="p">$</span> cat soft_skills.txt</div>
+          <h2 class="sec-title" style="margin-bottom:0;">Soft Skills</h2>
+          <div class="soft-list">
+            <span class="tag">Analytical Thinking</span>
+            <span class="tag">Problem Solving</span>
+            <span class="tag">Communication</span>
+            <span class="tag">Attention to Detail</span>
+            <span class="tag">Quick Learner</span>
+          </div>
+        </div>
+        <div class="add-info">
+          <div class="sec-label"><span class="p">$</span> cat notes.md</div>
+          <h2 class="sec-title" style="margin-bottom:0;">Additional Info</h2>
+          <ul style="margin-top:14px;">
+            <li>Familiar with cybersecurity lab environments and basic security tools</li>
+            <li>Strong interest in ethical hacking and security research</li>
+            <li>Eager to learn and adapt to new security tools and technologies</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="sec-label"><span class="p">$</span> cat contact.txt</div>
+      <div class="contact-panel">
+        <div>
+          <h2>Let's connect</h2>
+          <p>Open to entry-level security roles &amp; internships.</p>
+        </div>
+        <div class="contact-list">
+          <div><span class="k">location:</span><span>Navi Mumbai, Maharashtra</span></div>
+          <div><span class="k">phone:</span><a href="tel:+919653169288">+91 96531 69288</a></div>
+          <div><span class="k">email:</span><a href="mailto:pranayarakshe2005@gmail.com">pranayarakshe2005@gmail.com</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">// end of file — thanks for reading</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
